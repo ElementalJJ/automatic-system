@@ -1,0 +1,11 @@
+btn-outline-blue {
+    color: rgb(51, 51, 51);
+    border-color: none;
+    font-weight: 600;
+    background-color: rgb(163, 163, 163)
+}
+
+.btn-outline-blue:hover {
+    background-color: rgb(201, 201, 201);
+    border-color: none;
+}
