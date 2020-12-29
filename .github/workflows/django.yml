@@ -36,6 +36,13 @@ jobs:
         pip install pytest-cov
         pip install codecov
     - name: Run Tests and Upload the Results to Codecov.io
+      
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        DEBUG: ${{ secrets.DEBUG }}
+        ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+        TIME_ZONE: ${{ secrets.TIME_ZONE }}
+      
       run: |
         cd mysite
         pytest
