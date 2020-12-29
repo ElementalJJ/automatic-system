@@ -1,10 +1,10 @@
-from django import forms  # pragma: no cover
-from django.forms import ModelForm  # pragma: no cover
+from django import forms
+from django.forms import ModelForm
 
-from .models import Item  # pragma: no cover
+from .models import Item
 
 
-class CreateItemForm(ModelForm):  # pragma: no cover
+class ItemCreationForm(ModelForm):
     class Meta:
         model = Item
         fields = "__all__"
