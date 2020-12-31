@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Item, CustomUser
+from .filters import ItemFilter
 
 # Create your views here.
 
@@ -13,6 +14,8 @@ def home(request):
     except AttributeError:
         items = None
 
-    context = {"items": items}
+    myFilter = ItemFilter(request.GET, queryset=items)
+
+    context = {"items": items, "myFilter": myFilter}
 
     return render(request, "todo/index.html", context)

@@ -1,30 +1,49 @@
 {% extends 'todo/main.html' %}
 {% block content %}
 
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+
+            <form method="get">
+
+                {{myFilter.form.as_p}}
+
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+<br>
+
 <div class="card card-body" id="items">
 
     <table class="table">
+        <thead class="thead-dark">
 
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Due Date</th>
-            <th>Edit</th>
-            <th>Remove</th>
-        </tr>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
 
-        {% for item in items %}
+            {% for item in items %}
 
-        <tr>
-            <td>{{item.name}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.date_due}}</td>
-            <td><a class="btn btn-sm btn-info" href="">Edit</a></td>
-            <td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
-        </tr>
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.date_due}}</td>
+                <td><a class="btn btn-sm btn-info" href="">Edit</a></td>
+                <td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
+            </tr>
 
-        {% endfor %}
-
+            {% endfor %}
+        </thead>
     </table>
 
 </div>
