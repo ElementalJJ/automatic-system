@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django_filters",
     "accounts.apps.AccountsConfig",
     "todo.apps.TodoConfig",
+    "rest_framework",
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
