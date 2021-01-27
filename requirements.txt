@@ -4,7 +4,7 @@ astroid==2.4.2
 attrs==20.3.0
 black==20.8b1
 click==7.1.2
-coverage==5.3.1
+coverage==5.4
 Django==3.1.5
 iniconfig==1.1.1
 isort==5.7.0
